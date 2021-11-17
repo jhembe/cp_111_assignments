@@ -26,7 +26,7 @@ int main(){
         // Create the top line of the table
         cout<<setw(6)<<" |";
         // now the for loop for setting up the separators
-        for(int i {}; i <= table; ++i)
+        for(int i {1}; i <= table; ++i)
         {
             cout<<" " <<setw(3)<<i<<" |";
         }
@@ -38,6 +38,7 @@ int main(){
         {
             cout<<"------";
         }
+        cout<<endl; // here is the fix of the overflow separators
 
         // Now the major logic of our mathematical table starts
         // nested loops in action
