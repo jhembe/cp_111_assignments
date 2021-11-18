@@ -28,6 +28,7 @@
 #include<iostream>
 using namespace std;
 
+/*
 int main(){
 
     // now lets create a simple factorial program 
@@ -42,3 +43,7 @@ int main(){
     }
     cout<<factorial<<endl;
 }
+*/
+
+// NOTE: now i'll be writing notes pertaining arrays and all other important stuffs
+
