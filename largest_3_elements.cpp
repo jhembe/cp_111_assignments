@@ -2,26 +2,51 @@
 using namespace std;
 
 int main(){
+    int array[100];
+    int n,i,j;
+    int temp;
 
-    // lets make an array of 3 numbers, mixed sizes
-    int array[6] = {87,90,107,54,23,78};
+    //read the total number of elements
+    cout<<"Enter total number of elements to read : ";
+    cin>>n;
 
-    //let's begin the for loop logic
-    for(int i {0}; i<= 5;i++){
-        // let's perform some selection within the loop
-        if(array[0] < array[i]){
-            array[0] = array[i];
+    //checking bounds
+    if(n < 0 || n > 100){
+        cout<<"Input valid range"<<endl;
+        return -1;
+    }
+
+    // read the elements
+    for(i = 0; i<n; i++){
+
+        cout<<"Enter Element ["<< i + 1<<"] = ";
+        cin>>array[i];
+    }
+    
+    // print the input element
+    cout<<"Unsorted array Elements : "<<endl;
+
+    for(i = 0; i<n; i++){
+        cout<<array[i]<<"\t";
+    }
+    cout<<endl;
+
+    // now we sorting in an ascending order
+    // for loop again
+    for(i = 0; i<n;i++){
+        for(j = i + 1; j < n; j++){
+            if(array[i] > array[j]){
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
         }
     }
 
-    cout<<array[0]<<" "<<array[1]<<" "<<array[2]<<" "<<endl;
-    // end of the loop
-
-    //start of another loop
-    // cout<<"The three largest numbers are : ";
-    // for(int j {0}; j<=2;j++){                   NOTE: // This loop is responsible for printing out the 3 largest number
-    //     cout<<array[j]<<" , ";
-    // }
-
-    return 0;
+    // now printing the sorted array in ascending order
+    // we stillusing the for loop
+    for(i=0; i<n; i++){
+        cout<<array[i]<<"\t";
+    }
+    cout<<endl;
 }

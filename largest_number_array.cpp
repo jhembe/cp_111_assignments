@@ -42,15 +42,15 @@ int main(){
         }
     } // End of the sorting loop
 
-    cout<<endl;
+    cout<<array[0]<<endl;
 
     // now let's print the sorted array
     // NOTE using for loop to do that
-    cout<<"Sorted Array : ";
-    for(int i {0}; i< n; i++){
-        cout<<array[i]<<" , ";
-    }
-    cout<<endl;
+    // cout<<"Sorted Array : ";
+    // for(int k {0}; k< n; k++){
+    //     cout<<array[k]<<" , ";
+    // }
+    // cout<<endl;
 
     return 0;
 }
